@@ -1,9 +1,11 @@
 # Selenium IDE AI Side Builder
 
-### Quick STart
+### Quick Start
 * Install uv
-* Add OPENAI_API_KEY to .env (create a new file)
-* Run below builder.py with AI and demo1.py without AI.
+* Add the OPENAI_API_KEY to the .env file (if it doesn't exist, create a new one).
+* Run the following:
+  - builder.py with AI
+  - demo1.py without AI
 
 ### Use AI assistance to record playwright actions in the Selenium IDE .side format. 
 ```bash

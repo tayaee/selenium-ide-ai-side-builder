@@ -1,4 +1,4 @@
-from selenium_ide_ai_helper import AISideBuilder
+from selenium_ide_ai_side_builder import AISideBuilder
 
 
 def main():

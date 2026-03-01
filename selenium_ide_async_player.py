@@ -28,7 +28,7 @@ async def play_side_async(
 ):
     print(f"Playing (Async): {side_file} ({name})")
     if not os.path.exists(side_file):
-        print(f"  Error: {side_file} not found.")
+        print(f"    Error: {side_file} not found.")
         return
 
     with open(side_file, "r", encoding="utf-8") as f:
@@ -48,6 +48,6 @@ async def play_side_async(
                 elif c == "type":
                     await highlight_async(page, sel)
                     await page.fill(sel, v)
-                print(f"  Success: {c} {t}")
+                print(f"    Success: {c} {t}")
             except Exception as e:
-                print(f"  Failed: {c} {t} ({e})")
+                print(f"    Failed: {c} {t} ({e})")

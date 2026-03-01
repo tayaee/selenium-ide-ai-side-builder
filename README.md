@@ -9,86 +9,56 @@ Use AI assistance to create Selenium IDE script files interactively, then run th
   - demo1.py without AI
 
 ### Use AI assistance to record playwright actions in the Selenium IDE .side format. 
+
+Record login and logout.
+
 ```bash
-% uv run builder.py --output demo1
---- Designer Mode: demo1 ---
+% uv run builder.py --output demo2
 
-[Step 1] Action (or 'exit') [exit]: Go to https://saucedemo.com
-AI is thinking to find the steps for: 'Go to https://saucedemo.com'...
-Saved: demo1_step_1.side
-Playing: demo1_step_1.side 
-  Success: open https://saucedemo.com 
-Save demo1_step_1.side? [Y/n]: 
+[Step 1] AI prompt for browser action [exit]: Log into https://saucedemo.com
+Playing: sides\demo2_step_1.side ()
+    Success: open https://saucedemo.com
+    Success: type id=user-name
+    Success: type id=password
+    Success: click css=.btn_action
+    Save sides\demo2_step_1.side? [Y/n]:
 
-[Step 2] Action (or 'exit') [exit]: Log in
-AI is thinking to find the steps for: 'Log in'...
-Saved: demo1_step_2.side
-Playing: demo1_step_2.side
-  Success: type id=user-name standard_user
-  Success: type id=password secret_sauce
-  Success: click id=login-button
-Save demo1_step_2.side? [Y/n]:
+[Step 2] AI prompt for browser action [exit]: Log out
+Playing: sides\demo2_step_2.side ()
+    Success: click id=react-burger-menu-btn
+    Success: click id=logout_sidebar_link
+    Save sides\demo2_step_2.side? [Y/n]:
 
-[Step 3] Action (or 'exit') [exit]: Add a backpack to cart
-AI is thinking to find the steps for: 'Add a backpack to cart'...
-Saved: demo1_step_3.side
-Playing: demo1_step_3.side
-  Success: click id=add-to-cart-sauce-labs-backpack
-Save demo1_step_3.side? [Y/n]:
+[Step 3] AI prompt for browser action [exit]:
 
-[Step 4] Action (or 'exit') [exit]: Click cart on the right top corner
-AI is thinking to find the steps for: 'Click cart on the right top corner'...
-Saved: demo1_step_4.side
-Playing: demo1_step_4.side
-  Success: click css= .shopping_cart_link
-Save demo1_step_4.side? [Y/n]:
-
-[Step 5] Action (or 'exit') [exit]: Remove the backpack from the cart
-AI is thinking to find the steps for: 'Remove the backpack from the cart'...
-Saved: demo1_step_5.side
-Playing: demo1_step_5.side
-  Success: click id=remove-sauce-labs-backpack
-Save demo1_step_5.side? [Y/n]:
-
-[Step 6] Action (or 'exit') [exit]: Click the hamburger menu on the left top corner
-AI is thinking to find the steps for: 'Click the hamburger menu on the left top corner'...
-Saved: demo1_step_6.side
-Playing: demo1_step_6.side
-  Success: click id=react-burger-menu-btn
-Save demo1_step_6.side? [Y/n]:
-
-[Step 7] Action (or 'exit') [exit]: Click Logout
-AI is thinking to find the steps for: 'Click Logout'...
-Saved: demo1_step_7.side
-Playing: demo1_step_7.side
-  Success: click id=logout_sidebar_link
-Save demo1_step_7.side? [Y/n]:
-
-[Step 8] Action (or 'exit') [exit]: exit
-
---- Process Finished ---
-Files: demo1_step_1.side, demo1_step_2.side, demo1_step_3.side, demo1_step_4.side, demo1_step_5.side, demo1_step_6.side, demo1_step_7.side
-Script: demo1.py
+Scripts created: demo2_sync.py, demo2_async.py
+Side files saved in: sides/
 ```
 
 ### Play the .side files.
+
+Play login and logout with sync or async API.
+
 ```bash
-% uv run demo1.py
-Playing: demo1_step_1.side Go to https://saucedemo.com
-  Success: open https://saucedemo.com
-Playing: demo1_step_2.side Log in
-  Success: type id=user-name standard_user
-  Success: type id=password secret_sauce
-  Success: click id=login-button
-Playing: demo1_step_3.side Add a backpack to cart
-  Success: click id=add-to-cart-sauce-labs-backpack
-Playing: demo1_step_4.side Click cart on the right top corner
-  Success: click css= .shopping_cart_link
-Playing: demo1_step_5.side Remove the backpack from the cart
-  Success: click id=remove-sauce-labs-backpack
-Playing: demo1_step_6.side Click the hamburger menu on the left top corner
-  Success: click id=react-burger-menu-btn
-Playing: demo1_step_7.side Click Logout
-  Success: click id=logout_sidebar_link
+% uv run demo2_sync.py
+Playing: sides/demo2_step_1.side (Log into https://saucedemo.com)
+    Success: open https://saucedemo.com
+    Success: type id=user-name
+    Success: type id=password
+    Success: click css=.btn_action
+Playing: sides/demo2_step_2.side (Log out)
+    Success: click id=react-burger-menu-btn
+    Success: click id=logout_sidebar_link
+Done.
+
+% uv run demo2_async.py
+Playing (Async): sides/demo2_step_1.side (Log into https://saucedemo.com)
+    Success: open https://saucedemo.com
+    Success: type id=user-name
+    Success: type id=password
+    Success: click css=.btn_action
+Playing (Async): sides/demo2_step_2.side (Log out)
+    Success: click id=react-burger-menu-btn
+    Success: click id=logout_sidebar_link
 Done.
 ```

@@ -1,0 +1,27 @@
+{
+  "id": "98c1ffba-c55d-4951-bf0f-b727eae6bef3",
+  "version": "2.0",
+  "name": "Click the hamburger menu on the left top corner",
+  "url": "",
+  "tests": [
+    {
+      "id": "986223c9-1643-4159-b558-56ae063dfc72",
+      "name": "Click the hamburger menu on the left top corner",
+      "commands": [
+        {
+          "id": "49cfbf9b",
+          "comment": "",
+          "command": "click",
+          "target": "id=react-burger-menu-btn",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

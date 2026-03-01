@@ -1,0 +1,27 @@
+{
+  "id": "f615aa34-70ef-424c-a21b-beecd42892f3",
+  "version": "2.0",
+  "name": "Go to https://saucedemo.com",
+  "url": "",
+  "tests": [
+    {
+      "id": "2febf0dd-ff8a-4e08-9899-a4c2fc78d93d",
+      "name": "Go to https://saucedemo.com",
+      "commands": [
+        {
+          "id": "011c5eb6",
+          "comment": "",
+          "command": "open",
+          "target": "https://saucedemo.com",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

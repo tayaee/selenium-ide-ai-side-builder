@@ -1,0 +1,27 @@
+{
+  "id": "639e31da-a4b9-44f4-a8f4-432d4b9eb2b2",
+  "version": "2.0",
+  "name": "Add a backpack to cart",
+  "url": "",
+  "tests": [
+    {
+      "id": "5060e9ba-5bde-41af-9f47-f49506525126",
+      "name": "Add a backpack to cart",
+      "commands": [
+        {
+          "id": "ab8e2c3f",
+          "comment": "",
+          "command": "click",
+          "target": "id=add-to-cart-sauce-labs-backpack",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

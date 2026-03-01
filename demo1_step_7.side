@@ -1,0 +1,27 @@
+{
+  "id": "556704a3-0f9f-4e7c-8855-2ad99dbf9003",
+  "version": "2.0",
+  "name": "Click Logout",
+  "url": "",
+  "tests": [
+    {
+      "id": "10eaeb85-522c-4063-a742-e188f46232cc",
+      "name": "Click Logout",
+      "commands": [
+        {
+          "id": "97ad4484",
+          "comment": "",
+          "command": "click",
+          "target": "id=logout_sidebar_link",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

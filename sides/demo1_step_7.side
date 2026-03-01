@@ -1,0 +1,51 @@
+{
+  "id": "e346f698-fe8a-4a8f-b179-d456707e7182",
+  "version": "2.0",
+  "name": "Enter John as first name, Doe as last name, 11111 as zip code, and click Continue",
+  "url": "",
+  "tests": [
+    {
+      "id": "8d3f5426-9f34-4c3b-8db9-e4eeb1d292f7",
+      "name": "Enter John as first name, Doe as last name, 11111 as zip code, and click Continue",
+      "commands": [
+        {
+          "id": "830869d2",
+          "comment": "",
+          "command": "type",
+          "target": "id=first-name",
+          "targets": [],
+          "value": "John"
+        },
+        {
+          "id": "84e339b3",
+          "comment": "",
+          "command": "type",
+          "target": "id=last-name",
+          "targets": [],
+          "value": "Doe"
+        },
+        {
+          "id": "a959c55d",
+          "comment": "",
+          "command": "type",
+          "target": "id=postal-code",
+          "targets": [],
+          "value": "11111"
+        },
+        {
+          "id": "be50d5ea",
+          "comment": "",
+          "command": "click",
+          "target": "id=continue",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

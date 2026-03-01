@@ -1,0 +1,27 @@
+{
+  "id": "e0bcc119-c0bb-46a7-bbf6-8e856627b136",
+  "version": "2.0",
+  "name": "Click Checkout",
+  "url": "",
+  "tests": [
+    {
+      "id": "bf31a762-8177-4caf-bc07-f2fce04b783b",
+      "name": "Click Checkout",
+      "commands": [
+        {
+          "id": "907da556",
+          "comment": "",
+          "command": "click",
+          "target": "css=.btn_action.btn_medium.checkout_button",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

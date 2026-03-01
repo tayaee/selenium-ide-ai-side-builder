@@ -11,3 +11,8 @@ dependencies = [
     "pydantic>=2.12.5",
     "python-dotenv>=1.2.2",
 ]
+
+[dependency-groups]
+dev = [
+    "types-click>=7.1.8",
+]

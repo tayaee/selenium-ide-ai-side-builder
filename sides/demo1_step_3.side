@@ -1,0 +1,27 @@
+{
+  "id": "91e797b9-350d-4347-bd10-e18b87891c55",
+  "version": "2.0",
+  "name": "Add a jacket to cart",
+  "url": "",
+  "tests": [
+    {
+      "id": "04e69485-c825-4077-9585-916aa19a948c",
+      "name": "Add a jacket to cart",
+      "commands": [
+        {
+          "id": "69b8eb92",
+          "comment": "",
+          "command": "click",
+          "target": "id=add-to-cart-sauce-labs-fleece-jacket",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

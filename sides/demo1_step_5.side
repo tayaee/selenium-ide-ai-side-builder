@@ -1,18 +1,18 @@
 {
-  "id": "639e31da-a4b9-44f4-a8f4-432d4b9eb2b2",
+  "id": "1d81fc49-a57e-4d91-a090-e790c81b4ad2",
   "version": "2.0",
-  "name": "Add a backpack to cart",
+  "name": "Remove the backpack",
   "url": "",
   "tests": [
     {
-      "id": "5060e9ba-5bde-41af-9f47-f49506525126",
-      "name": "Add a backpack to cart",
+      "id": "66c3fc8c-2c52-43c3-9094-f04a634affe4",
+      "name": "Remove the backpack",
       "commands": [
         {
-          "id": "ab8e2c3f",
+          "id": "b34d670b",
           "comment": "",
           "command": "click",
-          "target": "id=add-to-cart-sauce-labs-backpack",
+          "target": "id=remove-sauce-labs-backpack",
           "targets": [],
           "value": ""
         }

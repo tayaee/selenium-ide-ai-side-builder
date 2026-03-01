@@ -1,0 +1,27 @@
+{
+  "id": "fb68bf17-0d4d-4c71-9875-41ae22583eb5",
+  "version": "2.0",
+  "name": "Click Finish",
+  "url": "",
+  "tests": [
+    {
+      "id": "01fe5d48-0d16-4367-a29f-011ee46a6fc5",
+      "name": "Click Finish",
+      "commands": [
+        {
+          "id": "7f01ee9d",
+          "comment": "",
+          "command": "click",
+          "target": "id=finish",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

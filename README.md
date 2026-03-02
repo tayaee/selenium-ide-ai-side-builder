@@ -1,4 +1,4 @@
-# Side Builder and Player 🚀
+# Side Builder and Player
 
 Build and execute Selenium IDE (.side) scripts with AI-powered efficiency.
 
@@ -13,13 +13,13 @@ Build and execute Selenium IDE (.side) scripts with AI-powered efficiency.
 
 ### Installation (via uv)
 ```bash
-git clone [https://github.com/tayaee/side-builder.git](https://github.com/tayaee/side-builder.git)
+git clone https://github.com/tayaee/side-builder.git
 cd side-builder
 uv tool install -e .
 side-builder --help
 ```
 
-## Running Examples
+### Running Examples
 ```
 cd examples/saucedemo/login-cart-order-logout
 uv run login_cart_order_logout_sync.py

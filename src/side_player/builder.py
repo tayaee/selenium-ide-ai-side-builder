@@ -13,13 +13,15 @@ from playwright.sync_api import sync_playwright
 from side_player.common import SeleniumCommand, SeleniumIdeSide, SeleniumTest
 from side_player.playwright.sync_api import play_side
 
+OPENAI_MODEL_NAME = "gpt-5-nano"
+
 
 class SeleniumIdeSideBuilder:
     def __init__(self, base_url: str):
         self.base_url = base_url
         self.pw = sync_playwright().start()
         self.browser = self.pw.chromium.launch(headless=False)
-        self.page = self.browser.new_page()        
+        self.page = self.browser.new_page()
 
     def save_side(self, filename: os.PathLike, side: SeleniumIdeSide):
         with open(filename, "w", encoding="utf-8") as f:
@@ -31,7 +33,7 @@ class SeleniumIdeSideBuilder:
 
 
 class AISideBuilder(SeleniumIdeSideBuilder):
-    def __init__(self, base_url: str, api_key: str, model: str = "gpt-4o-mini"):
+    def __init__(self, base_url: str, api_key: str, model: str = OPENAI_MODEL_NAME):
         super().__init__(base_url)
         self.client = OpenAI(api_key=api_key)
         self.model = model
@@ -51,19 +53,38 @@ class AISideBuilder(SeleniumIdeSideBuilder):
 
         prompt = f"""
         You are a Selenium IDE expert. Return a JSON list of Selenium IDE commands.
-        
+
         [Instruction]: {llm_prompt}
         [Current URL]: {self.page.url}
         [DOM Hint]: {dom_hint}
-        
+
+        [Supported Commands and Target/Value Formats]:
+        - setWindowSize: target="width,height" (e.g., "900,900"), value=""
+        - open: target="URL" (e.g., "https://example.com"), value=""
+        - click: target="selector" (e.g., "css=.btn"), value=""
+        - type: target="selector", value="text to type" (e.g., "user123")
+        - select: target="selector", value="label=value"
+        - waitForElementVisible: target="selector", value=""
+
         [Selector Rules]:
         - For ID: use "id=element_id"
         - For Class: use "css=.class_name"
         - For Name: use "name=element_name"
         - For XPath: use "xpath=//tag[@attr='val']"
         - NEVER use "class=" as a prefix. Use "css=." instead.
-        
-        Return Format: {{ "commands": [ {{"command": "click", "target": "css=.shopping_cart_link", "value": ""}} ] }}
+
+        [Return Format]:
+        Return ONLY a JSON object with this exact structure:
+        {{
+          "commands": [
+            {{"command": "command_name", "target": "target_value", "value": "value_value"}}
+          ]
+        }}
+
+        Example responses:
+        - "Resize browser to 900x900": {{"command": "setWindowSize", "target": "900,900", "value": ""}}
+        - "Click shopping cart": {{"command": "click", "target": "css=.shopping_cart_link", "value": ""}}
+        - "Type hello in input": {{"command": "type", "target": "css=#username", "value": "hello"}}
         """
 
         response = self.client.chat.completions.create(

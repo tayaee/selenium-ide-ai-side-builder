@@ -4,7 +4,7 @@
 ```
 
 # Set OpenAI API Key
-The Side Builder requires an OpenAI API key to use the GPT-4o-mini model.
+The Side Builder requires an OpenAI API key to use the gpt-5-nano model.
 ```
 % set OPENAI_API_KEY=sk-proj-OlHCz-hz<redacted>
 ```

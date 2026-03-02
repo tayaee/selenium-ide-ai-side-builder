@@ -1,0 +1,27 @@
+{
+  "id": "e57b5097-7548-4d1a-a983-2e5caed179c1",
+  "version": "2.0",
+  "name": "Adjust browser size to 500x500",
+  "url": "",
+  "tests": [
+    {
+      "id": "a07a5b72-db1e-40ce-b348-13e2db637cb1",
+      "name": "Adjust browser size to 500x500",
+      "commands": [
+        {
+          "id": "50959667",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "500,500",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

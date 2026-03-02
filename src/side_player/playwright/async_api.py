@@ -48,6 +48,11 @@ async def play_side_async(
                 elif c == "type":
                     await highlight_async(page, sel)
                     await page.fill(sel, v)
+                elif c == "setWindowSize":
+                    width, height = t.split(",")
+                    await page.set_viewport_size(
+                        {"width": int(width), "height": int(height)}
+                    )
                 print(f"    Success: {c} {t}")
             except Exception as e:
                 print(f"    Failed: {c} {t} ({e})")

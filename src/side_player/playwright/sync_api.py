@@ -46,6 +46,9 @@ def play_side(page: Page, side_file: str, name: str = "", base_url: str = ""):
                 elif c == "type":
                     highlight(page, sel)
                     page.fill(sel, v)
+                elif c == "setWindowSize":
+                    width, height = t.split(",")
+                    page.set_viewport_size({"width": int(width), "height": int(height)})
                 print(f"    Success: {c} {t}")
             except Exception as e:
                 print(f"    Failed: {c} {t} ({e})")

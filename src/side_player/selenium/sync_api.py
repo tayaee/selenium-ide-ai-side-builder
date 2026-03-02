@@ -56,6 +56,10 @@ def play_side(driver: WebDriver, side_file: str, name: str = "", base_url: str =
                     element.clear()
                     element.send_keys(v)
 
+                elif c == "setWindowSize":
+                    width, height = t.split(",")
+                    driver.set_window_size(int(width), int(height))
+
                 print(f"    Success: {c} {t}")
             except Exception as e:
                 print(f"    Failed: {c} {t} ({e})")

@@ -1,0 +1,27 @@
+{
+  "id": "3e8578a7-57b0-41d4-9ce4-0be2a4952bf4",
+  "version": "2.0",
+  "name": "Adjust browser size to 1000x1000",
+  "url": "",
+  "tests": [
+    {
+      "id": "b3939a24-6b22-4179-8d2b-08966e3015c6",
+      "name": "Adjust browser size to 1000x1000",
+      "commands": [
+        {
+          "id": "6561e7b5",
+          "comment": "",
+          "command": "setWindowSize",
+          "target": "1000,1000",
+          "targets": [],
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "suites": [],
+  "urls": [
+    ""
+  ],
+  "plugins": []
+}

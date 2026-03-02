@@ -1,18 +1,18 @@
 {
-  "id": "1d81fc49-a57e-4d91-a090-e790c81b4ad2",
+  "id": "c76d061e-94a1-4b49-b88a-d4b27a50ee28",
   "version": "2.0",
-  "name": "Remove the backpack",
+  "name": "Click Checkout",
   "url": "",
   "tests": [
     {
-      "id": "66c3fc8c-2c52-43c3-9094-f04a634affe4",
-      "name": "Remove the backpack",
+      "id": "3e20f52e-50d3-44eb-9d49-a7e13de6f07c",
+      "name": "Click Checkout",
       "commands": [
         {
-          "id": "b34d670b",
+          "id": "7b916a99",
           "comment": "",
           "command": "click",
-          "target": "id=remove-sauce-labs-backpack",
+          "target": "css=.btn.btn_action.btn_medium.checkout_button",
           "targets": [],
           "value": ""
         }

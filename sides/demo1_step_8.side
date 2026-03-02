@@ -1,18 +1,18 @@
 {
-  "id": "fb68bf17-0d4d-4c71-9875-41ae22583eb5",
+  "id": "12a0a4da-c702-43d2-8d8f-f2fc0e51ce37",
   "version": "2.0",
-  "name": "Click Finish",
+  "name": "Click Back Home",
   "url": "",
   "tests": [
     {
-      "id": "01fe5d48-0d16-4367-a29f-011ee46a6fc5",
-      "name": "Click Finish",
+      "id": "816e911e-9886-42b4-a77d-93e51ef77301",
+      "name": "Click Back Home",
       "commands": [
         {
-          "id": "7f01ee9d",
+          "id": "89b101c0",
           "comment": "",
           "command": "click",
-          "target": "id=finish",
+          "target": "css=.btn.btn_primary.btn_small[id='back-to-products']",
           "targets": [],
           "value": ""
         }

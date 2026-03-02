@@ -1,18 +1,18 @@
 {
-  "id": "91e797b9-350d-4347-bd10-e18b87891c55",
+  "id": "992e711d-c4f2-486a-863a-c8f5f8ab6af1",
   "version": "2.0",
-  "name": "Add a jacket to cart",
+  "name": "Add a backpack to the cart",
   "url": "",
   "tests": [
     {
-      "id": "04e69485-c825-4077-9585-916aa19a948c",
-      "name": "Add a jacket to cart",
+      "id": "5a0eb1f2-4914-4410-8698-a7c6fa110ac0",
+      "name": "Add a backpack to the cart",
       "commands": [
         {
-          "id": "69b8eb92",
+          "id": "e1dbaedd",
           "comment": "",
           "command": "click",
-          "target": "id=add-to-cart-sauce-labs-fleece-jacket",
+          "target": "id=add-to-cart-sauce-labs-backpack",
           "targets": [],
           "value": ""
         }

@@ -1,15 +1,15 @@
 {
-  "id": "eab781d0-7541-479d-ad4e-f3a008f8d176",
+  "id": "4937508e-30a4-47dc-b8d6-81e2ff9a2e46",
   "version": "2.0",
-  "name": "Open the cart",
+  "name": "Go to cart for checkout",
   "url": "",
   "tests": [
     {
-      "id": "5457f2ee-5e1f-4275-8dca-91746f65b037",
-      "name": "Open the cart",
+      "id": "7ce209ca-5a64-434e-9409-5e4984954980",
+      "name": "Go to cart for checkout",
       "commands": [
         {
-          "id": "fe04a99d",
+          "id": "0ca90d69",
           "comment": "",
           "command": "click",
           "target": "css=.shopping_cart_link",

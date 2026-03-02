@@ -1,42 +1,18 @@
 {
-  "id": "e346f698-fe8a-4a8f-b179-d456707e7182",
+  "id": "02379949-8dbe-464d-b778-58c299816b18",
   "version": "2.0",
-  "name": "Enter John as first name, Doe as last name, 11111 as zip code, and click Continue",
+  "name": "Click Finish",
   "url": "",
   "tests": [
     {
-      "id": "8d3f5426-9f34-4c3b-8db9-e4eeb1d292f7",
-      "name": "Enter John as first name, Doe as last name, 11111 as zip code, and click Continue",
+      "id": "9f76ebab-ae23-44c0-a377-09981b210cb4",
+      "name": "Click Finish",
       "commands": [
         {
-          "id": "830869d2",
-          "comment": "",
-          "command": "type",
-          "target": "id=first-name",
-          "targets": [],
-          "value": "John"
-        },
-        {
-          "id": "84e339b3",
-          "comment": "",
-          "command": "type",
-          "target": "id=last-name",
-          "targets": [],
-          "value": "Doe"
-        },
-        {
-          "id": "a959c55d",
-          "comment": "",
-          "command": "type",
-          "target": "id=postal-code",
-          "targets": [],
-          "value": "11111"
-        },
-        {
-          "id": "be50d5ea",
+          "id": "63f56ad2",
           "comment": "",
           "command": "click",
-          "target": "id=continue",
+          "target": "id=finish",
           "targets": [],
           "value": ""
         }

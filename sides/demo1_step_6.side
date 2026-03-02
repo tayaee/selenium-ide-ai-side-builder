@@ -1,18 +1,42 @@
 {
-  "id": "e0bcc119-c0bb-46a7-bbf6-8e856627b136",
+  "id": "fe703cf3-ae59-49df-be91-9a2d2b298391",
   "version": "2.0",
-  "name": "Click Checkout",
+  "name": "Enter John as first name, Doe as last name, 11111 as zip code and click Continue",
   "url": "",
   "tests": [
     {
-      "id": "bf31a762-8177-4caf-bc07-f2fce04b783b",
-      "name": "Click Checkout",
+      "id": "4c5f0c42-b249-43ea-8c72-271adaaf5292",
+      "name": "Enter John as first name, Doe as last name, 11111 as zip code and click Continue",
       "commands": [
         {
-          "id": "907da556",
+          "id": "22a2e818",
+          "comment": "",
+          "command": "type",
+          "target": "id=first-name",
+          "targets": [],
+          "value": "John"
+        },
+        {
+          "id": "9ea4a007",
+          "comment": "",
+          "command": "type",
+          "target": "id=last-name",
+          "targets": [],
+          "value": "Doe"
+        },
+        {
+          "id": "e5563b3f",
+          "comment": "",
+          "command": "type",
+          "target": "id=postal-code",
+          "targets": [],
+          "value": "11111"
+        },
+        {
+          "id": "84d13811",
           "comment": "",
           "command": "click",
-          "target": "css=.btn_action.btn_medium.checkout_button",
+          "target": "id=continue",
           "targets": [],
           "value": ""
         }

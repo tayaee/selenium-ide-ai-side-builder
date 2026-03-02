@@ -6,7 +6,20 @@ side-player is a next-generation automation tool that bridges the gap between AI
 
 ## Quick Start
 
-### Installation
+### To use with Playwright
+Install the package via pip or uv:
+
+```bash
+pip install side-player   # with pip
+uv add side-player        # with uv
+```
+
+Install Playwright
+```
+playwright install
+```
+
+### To use with Selenium
 Install the package via pip or uv:
 
 ```bash

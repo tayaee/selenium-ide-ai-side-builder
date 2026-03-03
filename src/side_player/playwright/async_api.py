@@ -24,11 +24,13 @@ async def highlight_async(page: Page, selector: str):
 
 
 async def play_side_async(
-    page: Page, side_file: str, name: str = "", base_url: str = ""
+    page: Page, side_file: str, name: str = "", base_url: str = "", debug: bool = False,
 ):
-    print(f"Playing (Async): {side_file} ({name})")
+    if debug:
+        print(f"Playing (Async): {side_file} ({name})")
     if not os.path.exists(side_file):
-        print(f"    Error: {side_file} not found.")
+        if debug:
+            print(f"    Error: {side_file} not found.")
         return
 
     with open(side_file, "r", encoding="utf-8") as f:
@@ -53,6 +55,8 @@ async def play_side_async(
                     await page.set_viewport_size(
                         {"width": int(width), "height": int(height)}
                     )
-                print(f"    Success: {c} {t}")
+                if debug:
+                    print(f"    Success: {c} {t}")
             except Exception as e:
-                print(f"    Failed: {c} {t} ({e})")
+                if debug:
+                    print(f"    Failed: {c} {t} ({e})")

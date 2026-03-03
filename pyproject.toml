@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "side-builder"
-version = "0.1.7"
+version = "0.1.8"
 authors = [ { name = "Soonki Ji", email = "soonki.ji@gmail.com" } ]
 description = "AI-powered Selenium IDE (.side) player and builder for Selenium and Playwright"
 readme = "README.md"

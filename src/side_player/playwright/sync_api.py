@@ -23,10 +23,12 @@ def highlight(page: Page, selector: str):
         pass
 
 
-def play_side(page: Page, side_file: str, name: str = "", base_url: str = ""):
-    print(f"Playing: {side_file} ({name})")
+def play_side(page: Page, side_file: str, name: str = "", base_url: str = "", debug: bool = False):
+    if debug:
+        print(f"Playing: {side_file} ({name})")
     if not os.path.exists(side_file):
-        print(f"    Error: {side_file} not found.")
+        if debug:
+            print(f"    Error: {side_file} not found.")
         return
 
     with open(side_file, "r", encoding="utf-8") as f:
@@ -49,6 +51,8 @@ def play_side(page: Page, side_file: str, name: str = "", base_url: str = ""):
                 elif c == "setWindowSize":
                     width, height = t.split(",")
                     page.set_viewport_size({"width": int(width), "height": int(height)})
-                print(f"    Success: {c} {t}")
+                if debug:
+                    print(f"    Success: {c} {t}")
             except Exception as e:
-                print(f"    Failed: {c} {t} ({e})")
+                if debug:
+                    print(f"    Failed: {c} {t} ({e})")

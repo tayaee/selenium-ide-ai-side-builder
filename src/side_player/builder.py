@@ -123,7 +123,15 @@ class AISideBuilder(SeleniumIdeSideBuilder):
 
 # --- Templates for Code Generation ---
 
-PLAYWRIGHT_SYNC_TEMPLATE = """from playwright.sync_api import sync_playwright
+PLAYWRIGHT_SYNC_TEMPLATE = """# /// pyproject
+# [requires]
+# python = ">=3.10"
+# playwright = "*"
+# side-player = "*"
+# ///
+# Run: uv run <script>.py (with PEP 723 support)
+
+from playwright.sync_api import sync_playwright
 
 from side_player.playwright.sync_api import play_side
 
@@ -141,7 +149,15 @@ if __name__ == "__main__":
     main()
 """
 
-PLAYWRIGHT_ASYNC_TEMPLATE = """import asyncio
+PLAYWRIGHT_ASYNC_TEMPLATE = """# /// pyproject
+# [requires]
+# python = ">=3.10"
+# playwright = "*"
+# side-player = "*"
+# ///
+# Run: uv run <script>.py (with PEP 723 support)
+
+import asyncio
 
 from playwright.async_api import async_playwright
 
@@ -161,7 +177,15 @@ if __name__ == "__main__":
     asyncio.run(main())
 """
 
-SELENIUM_SYNC_TEMPLATE = """from selenium import webdriver
+SELENIUM_SYNC_TEMPLATE = """# /// pyproject
+# [requires]
+# python = ">=3.10"
+# selenium = "*"
+# side-player = "*"
+# ///
+# Run: uv run <script>.py (with PEP 723 support)
+
+from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 from side_player.selenium.sync_api import play_side
@@ -225,7 +249,7 @@ def main(output):
 
             try:
                 builder.ai_create_side_file(llm_prompt=prompt, side_file=file_path)
-                play_side(builder.page, file_path)
+                play_side(builder.page, file_path, debug=True)
 
                 if click.confirm(f"    Save {file_path}?", default=True):
                     saved_steps.append((file_path, prompt))
@@ -241,7 +265,7 @@ def main(output):
         # Generate playwright sync code
         sync_code = "\n".join(
             [
-                f"        play_side(page, '{f.as_posix()}', name='{p}')"
+                f"        play_side(page, '{f.as_posix()}', name='{p}', debug=True)"
                 for f, p in saved_steps
             ]
         )
@@ -252,7 +276,7 @@ def main(output):
         # Generate playwright async code
         async_code = "\n".join(
             [
-                f"        await play_side_async(page, '{f.as_posix()}', name='{p}')"
+                f"        await play_side_async(page, '{f.as_posix()}', name='{p}', debug=True)"
                 for f, p in saved_steps
             ]
         )
@@ -263,7 +287,7 @@ def main(output):
         # Generate selenium sync code
         sel_sync_code = "\n".join(
             [
-                f"        play_side(driver, '{f.as_posix()}', name='{p}')"
+                f"        play_side(driver, '{f.as_posix()}', name='{p}', debug=True)"
                 for f, p in saved_steps
             ]
         )

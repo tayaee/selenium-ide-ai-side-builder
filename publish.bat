@@ -30,6 +30,7 @@ if errorlevel 1 (
     exit /b 1
 )
 
+git add -u
 git status
 
 echo Press ENTER to publish package and code...
